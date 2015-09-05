@@ -1,9 +1,10 @@
 #!/bin/bash
 
-. update_common.sh
+BATCH_DIR=`dirname $0`
+. $BATCH_DIR/update_common.sh
 
-if [ -f .bashrc ]; then
-    . .bashrc
+if [ -f $BATCH_DIR/.bashrc ]; then
+    . $BATCH_DIR/.bashrc
     i=1
     while [ $i -le 15 ]; do
 	yomou genrerank $1 download $i
@@ -12,5 +13,5 @@ if [ -f .bashrc ]; then
     done
     log $0 "execute genrerank $1 download"
 else
-    log $0 "failed to execute genrerank $1 download"
+    echo "$0 failed to execute genrerank $1 download" 1>&2
 fi
