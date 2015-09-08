@@ -7,7 +7,7 @@ if [ -f $BATCH_DIR/.bashrc ]; then
     . $BATCH_DIR/.bashrc
     i=1
     while [ $i -le 15 ]; do
-	yomou genrerank $1 download $i
+	$YOMOU genrerank $1 download $i
 	i=`expr $i + 1`
 	sleep 3
     done
