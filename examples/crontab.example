@@ -1,0 +1,14 @@
+# m h  dom mon dow   command
+SECONDLIST=/home/foobar/work/yomou/yomou-batch/update_secondlist.sh
+GENRELIST=/home/foobar/work/yomou/yomou-batch/update_genrelist.sh
+
+0 10 * * * $SECONDLIST daily
+2 10 * * * $SECONDLIST weekly
+4 10 * * * $SECONDLIST monthly
+6 10 * * * $SECONDLIST quarter
+8 10 * * 2 $SECONDLIST yearly
+10 10 * * * $GENRELIST daily
+15 10 * * * $GENRELIST weekly
+20 10 * * * $GENRELIST monthly
+25 10 * * * $GENRELIST quarter
+30 10 * * 2 $GENRELIST yearly
